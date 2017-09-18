@@ -37,7 +37,7 @@ fs.copyFileSync('source.txt', 'destination.txt', COPYFILE_EXCL);
 
 ## Related
 
-- [fs-copy-file](https://github.com/coderaiser/fs-copy-file-sync "fs-copy-file") - Asynchronously copies src to dest.
+- [fs-copy-file](https://github.com/coderaiser/fs-copy-file "fs-copy-file") - Asynchronously copies src to dest.
 
 ## License
 MIT
