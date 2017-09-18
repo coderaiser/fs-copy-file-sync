@@ -1,0 +1,6 @@
+.*
+test
+*.swp
+coverage
+lib
+
