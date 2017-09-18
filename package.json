@@ -1,6 +1,6 @@
 {
   "name": "fs-copy-file-sync",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "author": "coderaiser <mnemonic.enemy@gmail.com> (https://github.com/coderaiser)",
   "description": "fs.copyFileSync ponyfill",
   "homepage": "http://github.com/coderaiser/fs-copy-file-sync",
@@ -30,8 +30,7 @@
     "prebuild": "rimraf legacy",
     "legacy": "echo \"module.exports = require('./fs-copy-file-sync');\" > legacy/index.js"
   },
-  "dependencies": {
-  },
+  "dependencies": {},
   "license": "MIT",
   "engines": {
     "node": ">=0.8"
