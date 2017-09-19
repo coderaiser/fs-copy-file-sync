@@ -241,7 +241,7 @@ function rerequire(name) {
 }
 
 function asyncify(fn) {
-    return function async(...args) {
+    return async(...args) => {
         return fn(...args);
     };
 }
