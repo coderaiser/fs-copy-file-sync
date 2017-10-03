@@ -39,7 +39,7 @@
   "devDependencies": {
     "babel-eslint": "^8.0.0",
     "buble": "^0.16.0",
-    "coveralls": "^2.11.6",
+    "coveralls": "^3.0.0",
     "eslint": "^4.0.0",
     "nodemon": "^1.11.0",
     "nyc": "^11.0.2",
