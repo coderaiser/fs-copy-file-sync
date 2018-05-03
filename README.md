@@ -1,6 +1,6 @@
 fs-copy-file-sync [![License][LicenseIMGURL]][LicenseURL] [![NPM version][NPMIMGURL]][NPMURL] [![Dependency Status][DependencyStatusIMGURL]][DependencyStatusURL] [![Build Status][BuildStatusIMGURL]][BuildStatusURL] [![Coverage Status][CoverageIMGURL]][CoverageURL]
 =========
-Node.js v8.5.0 [fs.copyFileSync](https://nodejs.org/dist/latest-v8.x/docs/api/fs.html#fs_fs_copyfilesync_src_dest_flags) [ponyfill](https://ponyfill.com).
+Node.js v8.5.0 [fs.copyFileSync](https://nodejs.org/dist/latest-v10.x/docs/api/fs.html#fs_fs_copyfilesync_src_dest_flags) [ponyfill](https://ponyfill.com).
 
 Synchronously copies src to dest. By default, dest is overwritten if it already exists. Returns undefined. Node.js makes no guarantees about the atomicity of the copy operation. If an error occurs after the destination file has been opened for writing, Node.js will attempt to remove the destination.
 
