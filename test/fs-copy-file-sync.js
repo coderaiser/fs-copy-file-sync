@@ -178,7 +178,7 @@ test('copyFileSync: pipe', (t) => {
     t.end();
 });
 
-test('copyFileSync: COPYFILE_EXCL: EEXIST: pipe', (t) => {
+test('copyFileSync: COPYFILE_EXCL: EEXIST', (t) => {
     const src = path.join(fixture, 'src');
     const dest = path.join(fixture, 'dest');
     
@@ -187,6 +187,7 @@ test('copyFileSync: COPYFILE_EXCL: EEXIST: pipe', (t) => {
     
     fs.writeFileSync(dest, 'hello');
     
+    const copyFileSync = rerequire(COPY_FILE_SYNC);
     const [e] = tryCatch(copyFileSync, src, dest, COPYFILE_EXCL);
     
     fs.unlinkSync(dest);
@@ -195,7 +196,7 @@ test('copyFileSync: COPYFILE_EXCL: EEXIST: pipe', (t) => {
     t.end();
 });
 
-test('copyFileSync: COPYFILE_EXCL | COPYFILE_FICLONE : EEXIST: pipe', (t) => {
+test('copyFileSync: COPYFILE_EXCL | COPYFILE_FICLONE : EEXIST', (t) => {
     const src = path.join(fixture, 'src');
     const dest = path.join(fixture, 'dest');
     
@@ -204,6 +205,7 @@ test('copyFileSync: COPYFILE_EXCL | COPYFILE_FICLONE : EEXIST: pipe', (t) => {
     
     fs.writeFileSync(dest, 'hello');
     
+    const copyFileSync = rerequire(COPY_FILE_SYNC);
     const [e] = tryCatch(copyFileSync, src, dest, COPYFILE_EXCL | COPYFILE_FICLONE);
     
     fs.unlinkSync(dest);
@@ -212,7 +214,7 @@ test('copyFileSync: COPYFILE_EXCL | COPYFILE_FICLONE : EEXIST: pipe', (t) => {
     t.end();
 });
 
-test('copyFileSync: COPYFILE_EXCL | COPYFILE_FICLONE_FORCE : EEXIST: pipe', (t) => {
+test('copyFileSync: COPYFILE_EXCL | COPYFILE_FICLONE_FORCE : EEXIST', (t) => {
     const src = path.join(fixture, 'src');
     const dest = path.join(fixture, 'dest');
     
@@ -221,6 +223,7 @@ test('copyFileSync: COPYFILE_EXCL | COPYFILE_FICLONE_FORCE : EEXIST: pipe', (t) 
     
     fs.writeFileSync(dest, 'hello');
     
+    const copyFileSync = rerequire(COPY_FILE_SYNC);
     const [e] = tryCatch(copyFileSync, src, dest, COPYFILE_EXCL | COPYFILE_FICLONE_FORCE);
     
     fs.unlinkSync(dest);
