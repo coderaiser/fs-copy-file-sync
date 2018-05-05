@@ -15,10 +15,16 @@ const {
 
 const fixture = path.join(__dirname, 'fixture');
 
-test('fs.copyFileSync: original: no args: message', (t) => {
-    const [e] = tryCatch(copyFileSync);
+test('copyFileSync: no args: message', (t) => {
     const msg = 'The "src" argument must be one of type string, Buffer, or URL. Received type undefined';
     
+    const original = fs.copyFileSync;
+    fs.copyFileSync = null;
+    
+    const copyFileSync = rerequire(COPY_FILE_SYNC);
+    const [e] = tryCatch(copyFileSync);
+    
+    fs.copyFileSync = original;
     t.equal(e.message, msg, 'should throw when no src');
     t.end();
 });
