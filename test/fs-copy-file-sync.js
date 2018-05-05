@@ -161,13 +161,32 @@ test('copyFileSync: EEXIST', (t) => {
     t.end();
 });
 
+test('copyFileSync: no errors', (t) => {
+    const src = path.join(fixture, 'src');
+    const dest = path.join(fixture, 'dest');
+    
+    const original = fs.copyFileSync;
+    fs.copyFileSync = null;
+    
+    const copyFileSync = rerequire(COPY_FILE_SYNC);
+    const [e] = tryCatch(copyFileSync, src, dest, COPYFILE_EXCL);
+    
+    fs.unlinkSync(dest);
+    
+    fs.copyFileSync = original;
+    
+    t.notOk(e, 'should not be errors');
+    t.end();
+});
+
 test('copyFileSync: pipe', (t) => {
     const src = path.join(fixture, 'src');
     const dest = path.join(fixture, 'dest');
     
-    const original = fs.copyFile;
+    const original = fs.copyFileSync;
     fs.copyFileSync = null;
     
+    const copyFileSync = rerequire(COPY_FILE_SYNC);
     tryCatch(copyFileSync, src, dest, COPYFILE_EXCL);
     
     const data = fs.readFileSync(dest, 'utf8');
