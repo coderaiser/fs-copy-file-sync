@@ -47,10 +47,10 @@ fs.copyFileSync('source.txt', 'destination.txt', COPYFILE_EXCL);
 ## License
 MIT
 
-[NPMIMGURL]:                https://img.shields.io/npm/v/fs-copy-file-sync.svg?style=flat
-[BuildStatusIMGURL]:        https://img.shields.io/travis/coderaiser/fs-copy-file-sync/master.svg?style=flat
-[DependencyStatusIMGURL]:   https://img.shields.io/david/coderaiser/fs-copy-file-sync.svg?style=flat
-[LicenseIMGURL]:            https://img.shields.io/badge/license-MIT-317BF9.svg?style=flat
+[NPMIMGURL]:                https://img.shields.io/npm/v/fs-copy-file-sync.svg?style=flat&longCache=true
+[BuildStatusIMGURL]:        https://img.shields.io/travis/coderaiser/fs-copy-file-sync/master.svg?style=flat&longCache=true
+[DependencyStatusIMGURL]:   https://img.shields.io/david/coderaiser/fs-copy-file-sync.svg?style=flat&longCache=true
+[LicenseIMGURL]:            https://img.shields.io/badge/license-MIT-317BF9.svg?style=flat&longCache=true
 [CoverageIMGURL]:           https://coveralls.io/repos/coderaiser/fs-copy-file-sync/badge.svg?branch=master&service=github
 [NPMURL]:                   https://npmjs.org/package/fs-copy-file-sync "npm"
 [BuildStatusURL]:           https://travis-ci.org/coderaiser/fs-copy-file-sync  "Build Status"
