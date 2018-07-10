@@ -7,7 +7,7 @@ Synchronously copies src to dest. By default, dest is overwritten if it already 
 ## Install
 
 ```
-npm i fs-copy-file-sync-sync
+npm i fs-copy-file-sync
 ```
 
 ## API
