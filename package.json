@@ -37,7 +37,6 @@
   },
   "main": "legacy/fs-copy-file-sync.js",
   "devDependencies": {
-    "babel-eslint": "^8.0.0",
     "buble": "^0.19.2",
     "coveralls": "^3.0.0",
     "eslint": "^5.0.1",
