@@ -43,6 +43,8 @@ fs.copyFileSync('source.txt', 'destination.txt', COPYFILE_EXCL);
 ## Related
 
 - [fs-copy-file](https://github.com/coderaiser/fs-copy-file "fs-copy-file") - Asynchronously copies src to dest.
+- [fs-readdir-with-file-types](https://github.com/coderaiser/fs-readdir-with-file-types "fs-readdir-with-file-types") - Asynchronously read directory with file types.
+- [fs-readdir-sync-with-file-types](https://github.com/coderaiser/fs-readdir-sync-with-file-types "fs-readdir-sync-with-file-types") - Synchronously read directory with file types.
 
 ## License
 MIT
