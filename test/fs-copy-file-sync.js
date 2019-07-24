@@ -2,7 +2,7 @@
 
 const path = require('path');
 const fs = require('fs');
-const test = require('tape');
+const test = require('supertape');
 const tryCatch = require('try-catch');
 const COPY_FILE_SYNC = '../lib/fs-copy-file-sync';
 const copyFileSync = require(COPY_FILE_SYNC);
@@ -37,7 +37,7 @@ test('copyFileSync: no args: code', (t) => {
     const [e] = tryCatch(copyFileSync);
     const code = 'ERR_INVALID_ARGS_TYPE';
     
-    fs.copyFileSync = original
+    fs.copyFileSync = original;
     t.equal(e.code, code, 'should code be equal');
     t.end();
 });
@@ -243,7 +243,12 @@ test('copyFileSync: COPYFILE_EXCL | COPYFILE_FICLONE_FORCE : EEXIST', (t) => {
     fs.writeFileSync(dest, 'hello');
     
     const copyFileSync = rerequire(COPY_FILE_SYNC);
-    const [e] = tryCatch(copyFileSync, src, dest, COPYFILE_EXCL | COPYFILE_FICLONE_FORCE);
+    const [e] = tryCatch(
+        copyFileSync,
+        src,
+        dest,
+        COPYFILE_EXCL | COPYFILE_FICLONE_FORCE
+    );
     
     fs.unlinkSync(dest);
     fs.copyFileSync = original;
@@ -277,7 +282,7 @@ test('copyFileSync: COPYFILE_EXCL: stat: error', (t) => {
     
     fs.copyFileSync = null;
     fs.statSync = () => {
-        throw Error('hello')
+        throw Error('hello');
     };
     
     const copyFileSync = rerequire(COPY_FILE_SYNC);
