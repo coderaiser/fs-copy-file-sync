@@ -30,7 +30,7 @@
     "legacy": "madrun legacy"
   },
   "dependencies": {
-    "eslint-plugin-putout": "^1.9.1"
+    "eslint-plugin-putout": "^3.0.0"
   },
   "license": "MIT",
   "engines": {
