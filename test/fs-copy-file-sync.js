@@ -247,7 +247,7 @@ test('copyFileSync: COPYFILE_EXCL | COPYFILE_FICLONE_FORCE : EEXIST', (t) => {
         copyFileSync,
         src,
         dest,
-        COPYFILE_EXCL | COPYFILE_FICLONE_FORCE
+        COPYFILE_EXCL | COPYFILE_FICLONE_FORCE,
     );
     
     fs.unlinkSync(dest);
