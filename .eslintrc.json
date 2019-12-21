@@ -1,17 +1,16 @@
 {
-    "rules": {
-        "indent": ["error", 4]
-    },
     "overrides": [{
-        "files": ["test"],
+        "files": [".madrun.js"],
         "rules": {
-            "no-console": "off"
+            "node/no-unsupported-features/es-syntax": "off"
         }
     }],
     "extends": [
-        "plugin:putout/recommended"
-  ],
-  "plugins": [
-      "putout"
-  ]
+        "plugin:putout/recommended",
+        "plugin:node/recommended"
+    ],
+    "plugins": [
+        "node",
+        "putout"
+    ]
 }
