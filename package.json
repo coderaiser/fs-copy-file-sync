@@ -29,8 +29,7 @@
     "prebuild": "madrun prebuild",
     "legacy": "madrun legacy"
   },
-  "dependencies": {
-  },
+  "dependencies": {},
   "license": "MIT",
   "engines": {
     "node": ">=0.8"
@@ -43,7 +42,7 @@
     "eslint-plugin-putout": "^3.0.0",
     "nodemon": "^1.11.0",
     "nyc": "^14.1.1",
-    "rimraf": "^2.6.2",
+    "rimraf": "^3.0.0",
     "supertape": "^1.2.3",
     "try-catch": "^2.0.0"
   }
